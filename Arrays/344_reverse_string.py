@@ -1,13 +1,4 @@
 def reverseString(s):
-    """
-    Reverses a given string s in-place.
-
-    Args:
-        s (str): The input string to be reversed.
-
-    Returns:
-        None: This function modifies the input string in-place and does not return anything.
-    """
     start = 0
     end = len(s)-1
     while start<=end:
@@ -25,3 +16,13 @@ def reverseString(s):
         temp = s[i]
         s[i] = s[n-1-i]
         s[n-1-i] = temp
+
+# Notes
+# The function reverseString takes a list of characters s and reverses it in-place.
+# It uses two pointers, start and end, to track the positions of characters to be swapped.
+# The while loop continues until the start pointer is less than or equal to the end pointer.
+# Inside the loop, it swaps the characters at the start and end indices.
+# After swapping, it increments the start pointer and decrements the end pointer to move towards the center of the list.
+# The process continues until all characters have been swapped, effectively reversing the list.
+# An alternative approach is also provided, which uses a for loop to iterate through the first half of the list and swaps characters symmetrically from the start and end.
+# This approach achieves the same result of reversing the list in-place.
