@@ -1,4 +1,4 @@
-input = [1,2,3,4,5]
+input = [1]
 
 def insertion_sort(arr):
     n = len(arr)
