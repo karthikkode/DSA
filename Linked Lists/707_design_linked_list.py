@@ -97,4 +97,36 @@ class MyLinkedList:
             f = f.next.next
         return s
 
+    def reverseLinkedList(self):
+        curr = self.head
+        prev = None
+        while curr is not None:
+            temp = curr.next
+            curr.next = prev
+            prev = curr
+            curr = temp
+        self.head = prev # new head
+
+    def cycleLinkedListDict(self):
+        curr = self.head
+        keys = set()
+        while curr is not None:
+            if curr in keys:
+                return True
+            keys.add(curr)
+            curr = curr.next
+        return False
+    
+    def cycleLinkedListFloyd(self):
+        s = self.head
+        f = self.head
+        while (f is not None and f.next is not None):
+            s = s.next
+            f=f.next.next
+            if s==f:
+                return True
+        
+        return False
+
+
 # Your MyLinkedList object will be instantiated and called as such:
